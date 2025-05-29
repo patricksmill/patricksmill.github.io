@@ -3,14 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Personal Website</title>
+    <style>
+        body {
+            background-color: #181818;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            background: #232323;
+            border-radius: 10px;
+            box-shadow: 0 2px 16px #0008;
+            padding: 2rem 2.5rem;
+        }
+        a { color: #8ab4f8; }
+        pre, code { background: #222; color: #b5cea8; border-radius: 4px; padding: 2px 6px; }
+        h1, h2, h3, h4, h5, h6 { color: #fff; }
+    </style>
 </head>
 <body>
-    <h1>Hello World</h1>
-    <p>This is a paragraph</p>
-    <a href="https://www.google.com">Google</a>
-    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
-    <button>Click me</button>
-    <input type="text" placeholder="Enter your name">
+    <div class="container">
+        <div id="content">Loading...</div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        fetch('content.md')
+            .then(response => response.text())
+            .then(text => {
+                document.getElementById('content').innerHTML = marked.parse(text);
+            })
+            .catch(() => {
+                document.getElementById('content').innerHTML = '<p>Could not load content.</p>';
+            });
+    </script>
 </body>
 </html>
