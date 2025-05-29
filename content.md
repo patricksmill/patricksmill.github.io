@@ -36,9 +36,11 @@ Hi, I'm Patrick. I'm passionate about technology, computer hardware and software
   - Using tools like OCAT for EFI management
   - Documentation and sharing solutions with the community
 
+- ####
+
 ## Contact
 
 - [Email](<patricksmill@outlook.com>)
 - [GitHub](https://github.com/patricksmill)
-- [LinkedIn](www.linkedin.com/in/patrick-mill)
+- [LinkedIn](https://linkedin.com/in/patrick-mill)
 - [Threads](https://www.threads.com/@patmill13)
