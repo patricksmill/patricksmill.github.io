@@ -14,7 +14,21 @@ Hi, I'm Patrick. I'm passionate about technology, computer hardware and software
 
 - #### QuickNotes
 
-    A simple note taking application for android, initially made for my Software Design class. The app can
+    A simple note taking application for android, initially made for my Software Design class. Users can add notes and have them tagged for easy filtering and organization. This was my first time using source control and proved valuable, learning how to use git from both the terminal and inside IDEs.
+
+    I'm going to continue working on QuickNotes after submitting it for my class. I have ideas for porting to iOS, adding features like cloud backups, etc.
+
+    [Source code for QuickNotes can be found here.](https://github.com/patricksmill/QuickNotes)
+
+    _Skills learned/practiced:_
+
+  - Android app development using Java
+  - UI/UX design principles for mobile applications
+  - Version control with Git (terminal and IDE integration)
+  - Software design patterns and project structure (MVC)
+  - Debugging and testing mobile applications
+  - Tag-based organization and filtering systems
+  - Various IDEs (Intellij, VS Code, Android Studio)
 
 ### Miscellaneous
 
@@ -36,7 +50,27 @@ Hi, I'm Patrick. I'm passionate about technology, computer hardware and software
   - Using tools like OCAT for EFI management
   - Documentation and sharing solutions with the community
 
-- ####
+- #### Home Server
+  
+  I built my first computer during the pandemic in 2020. Since then, I have gradually been upgrading it one part at a time until, like the ship of Theseus, it is comprised of new replacement parts. This left me with an entire PC's worth of old parts. My summer project since coming home from school has been building a Family home server that serves as a media device. 
+  
+  The server runs on CasaOS on top of Ubuntu Server, and utilizes serveral Docker containers:
+
+  - For family photos, I use Immich, a self-hosted Google Photos alternative.
+  - I ripped our old DVDs using MakeMKV and organized them using Radarr for movies and Sonarr for TV Shows
+  - Plex Media Server streams these backups to devices on the network, serving as a Self-hosted Netflix
+
+  _Skills learned/practiced:_
+  
+  - Linux server administration (Ubuntu Server)
+  - Docker
+  - Network configuration and port management
+  - Media file organization and metadata management
+  - Storage management and file system organization
+  - Troubleshooting hardware compatibility issues
+  - Backup and data recovery strategies
+  - Web-UI administration interfaces
+  - Network File Sharing (SMB)
 
 ## Contact
 
