@@ -1,4 +1,10 @@
-/* CSS Variables for themes */
+:root {
+    --grid-unit: 1rem;
+    --border-radius-base: 10px;
+    --max-width: 850px;
+}
+
+/* Light theme (default) */
 :root {
     --bg-color: #ffffff;
     --text-color: #333333;
@@ -11,16 +17,19 @@
     --code-color: #d63384;
 }
 
-[data-theme="dark"] {
-    --bg-color: #181818;
-    --text-color: #e0e0e0;
-    --container-bg: #232323;
-    --header-bg: #1a1a1a;
-    --border-color: #404040;
-    --link-color: #8ab4f8;
-    --shadow: 0 2px 16px rgba(0,0,0,0.5);
-    --code-bg: #222222;
-    --code-color: #b5cea8;
+/* Dark theme when system prefers dark */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #181818;
+        --text-color: #e0e0e0;
+        --container-bg: #232323;
+        --header-bg: #1a1a1a;
+        --border-color: #404040;
+        --link-color: #8ab4f8;
+        --shadow: 0 2px 16px rgba(0,0,0,0.5);
+        --code-bg: #222222;
+        --code-color: #b5cea8;
+    }
 }
 
 * {
@@ -48,7 +57,7 @@ body {
 }
 
 .header-content {
-    max-width: 850px;
+    max-width: var(--max-width);
     margin: 0 auto;
     padding: 1rem 2rem;
     display: flex;
@@ -85,25 +94,11 @@ body {
     color: white;
 }
 
-.theme-toggle {
-    background: none;
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    padding: 0.5rem;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.theme-toggle:hover {
-    background-color: var(--border-color);
-}
-
 .container {
-    max-width: 850px;
+    max-width: var(--max-width);
     margin: 2rem auto;
     background: var(--container-bg);
-    border-radius: 10px;
+    border-radius: var(--border-radius-base);
     box-shadow: var(--shadow);
     padding: 2rem 2.5rem;
 }
