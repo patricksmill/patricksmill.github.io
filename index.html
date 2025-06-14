@@ -2,95 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Patrick Mill</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/casualwriter/casual-markdown/dist/casual-markdown.css">
+    <script src="https://cdn.jsdelivr.net/gh/casualwriter/casual-markdown/dist/casual-markdown.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="header">
         <div class="header-content">
-            <div class="header-left">
-                <div class="header-profile">
-                    <img src="assets/profile_pic_temp.png" alt="Patrick Mill" class="header-avatar">
-                    <h1 class="logo">Patrick Mill</h1>
-                </div>
-            </div>
-            <div class="header-right">
-                <div class="header-links">
-                    <a href="mailto:patricksmill@outlook.com" class="header-link" title="Email">✉️</a>
-                    <a href="https://github.com/patricksmill" class="header-link" title="GitHub">⚡</a>
-                    <a href="https://linkedin.com/in/patrick-mill" class="header-link" title="LinkedIn">💼</a>
-                    <a href="https://www.threads.com/@patmill13" class="header-link" title="Threads">🧵</a>
-                </div>
-                <nav class="nav">
-                    <a href="index.html" class="nav-link active">About</a>
-                    <a href="projects.html" class="nav-link">Projects</a>
-                </nav>
-            </div>
+            <h1 class="logo">Patrick Mill</h1>
+            <nav class="social-links">
+                <a href="mailto:patricksmill@outlook.com" class="social-link">
+                    <img src="assets/icons/email-icon.svg" alt="Email" width="20" height="20">
+                </a>
+                <a href="https://github.com/patricksmill" class="social-link">
+                    <img src="assets/icons/github-mark.svg" alt="GitHub" width="20" height="20">
+                </a>
+                <a href="https://linkedin.com/in/patrick-mill" class="social-link">
+                    <img src="assets/icons/linkedin-icon.svg" alt="LinkedIn" width="20" height="20">
+                </a>
+                <a href="https://www.threads.com/@patmill13" class="social-link">
+                    <img src="assets/icons/threads-icon.svg" alt="Threads" width="20" height="20">
+                </a>
+            </nav>
         </div>
     </header>
     
-    <main class="main-wrapper">
-        <div class="sidebar">
-            <div class="profile">
-                <div class="profile-image">
-                    <img src="assets/profile_pic_temp.png" alt="Patrick Mill" class="avatar">
-                </div>
-                <h2 class="profile-name">Patrick Mill</h2>
-                <p class="profile-title">Technology Enthusiast</p>
-                
-                <div class="profile-links">
-                    <a href="mailto:patricksmill@outlook.com" class="profile-link">
-                        <span class="link-icon">✉️</span>
-                        <span class="link-text">Email</span>
-                    </a>
-                    <a href="https://github.com/patricksmill" class="profile-link">
-                        <span class="link-icon">⚡</span>
-                        <span class="link-text">GitHub</span>
-                    </a>
-                    <a href="https://linkedin.com/in/patrick-mill" class="profile-link">
-                        <span class="link-icon">💼</span>
-                        <span class="link-text">LinkedIn</span>
-                    </a>
-                    <a href="https://www.threads.com/@patmill13" class="profile-link">
-                        <span class="link-icon">🧵</span>
-                        <span class="link-text">Threads</span>
-                    </a>
-                </div>
-                
-            </div>
-        </div>
-        
-        <div class="main-content">
-            <div class="content">
-                <h2>About Me</h2>
-                <p>Hi, I'm Patrick. I'm passionate about technology, computer hardware and software. I enjoy building and experimenting with various tech projects, from creating Android applications to setting up self-hosted servers and exploring the world of Hackintosh systems.</p>
-                
-                <p>My journey in technology spans multiple areas including mobile app development, system administration, and hardware troubleshooting. I believe in learning through hands-on experience and sharing knowledge with the community.</p>
-                
-                <p>When I'm not working on tech projects, you'll find me playing baseball, which has been a lifelong passion of mine. I appreciate the strategic thinking and teamwork that both technology and sports require.</p>
-                
-                <h3>Recent Updates</h3>
-                <div class="updates">
-                    <div class="update-item">
-                        <span class="update-date">Summer 2025</span>
-                        <span class="update-text">Created a website showcasing my projects.</span>
-                    </div>
-                    <div class="update-item">
-                        <span class="update-date">Summer 2025</span>
-                        <span class="update-text">Began working on a home media server.</span>
-                    </div>
-                    <div class="update-item">
-                        <span class="update-date">Spring 2025</span>
-                        <span class="update-text">Created a Note-Taking Android App, QuickNotes.</span>
-                    </div>
-                    <div class="update-item">
-                        <span class="update-date">Summer 2024</span>
-                        <span class="update-text">Built my own Hackintosh dual-boot system</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <main class="main-content" id="content">
+        Loading...
     </main>
+
+    <script>
+        // Function to load and render markdown content
+        async function loadMarkdown() {
+            try {
+                const response = await fetch('resume.md');
+                const markdown = await response.text();
+                const content = document.getElementById('content');
+                content.innerHTML = md.html(markdown);
+            } catch (error) {
+                console.error('Error loading markdown:', error);
+                document.getElementById('content').innerHTML = 'Error loading content. Please try again later.';
+            }
+        }
+
+        // Load content when page loads
+        window.addEventListener('load', loadMarkdown);
+    </script>
 </body>
 </html>
