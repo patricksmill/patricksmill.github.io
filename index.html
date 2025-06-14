@@ -2,79 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patrick Mill</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/casualwriter/casual-markdown/dist/casual-markdown.css">
-    <script src="https://cdn.jsdelivr.net/gh/casualwriter/casual-markdown/dist/casual-markdown.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="header">
         <div class="header-content">
-            <h1 class="logo">Patrick Mill</h1>
+            <span class="logo">Patrick Mill</span>
             <nav class="social-links">
-                <a href="mailto:patricksmill@outlook.com" class="social-link">
-                    <img src="assets/icons/email-icon.svg" alt="Email" width="20" height="20">
+                <a href="mailto:patricksmill@outlook.com" class="social-link" title="Email">
+                    <img src="assets/icons/email-icon.svg" alt="Email">
                 </a>
-                <a href="https://github.com/patricksmill" class="social-link">
-                    <img src="assets/icons/github-mark.svg" alt="GitHub" width="20" height="20">
+                <a href="https://github.com/patricksmill" class="social-link" title="GitHub">
+                    <img src="assets/icons/github-mark.svg" alt="GitHub">
                 </a>
-                <a href="https://linkedin.com/in/patrick-mill" class="social-link">
-                    <img src="assets/icons/linkedin-icon.svg" alt="LinkedIn" width="20" height="20">
+                <a href="https://linkedin.com/in/patrick-mill" class="social-link" title="LinkedIn">
+                    <img src="assets/icons/linkedin-icon.svg" alt="LinkedIn">
                 </a>
-                <a href="https://www.threads.com/@patmill13" class="social-link">
-                    <img src="assets/icons/threads-icon.svg" alt="Threads" width="20" height="20">
+                <a href="https://www.threads.com/@patmill13" class="social-link" title="Threads">
+                    <img src="assets/icons/threads-icon.svg" alt="Threads">
                 </a>
             </nav>
         </div>
     </header>
-    
-    <main class="main-content" id="content">
-        Loading...
-    </main>
-
+    <div class="container">
+        <div id="content">Loading...</div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
-        // Function to load and render markdown content
-        async function loadMarkdown() {
-            console.log('Starting to load markdown...');
-            const content = document.getElementById('content');
-            
-            try {
-                console.log('Fetching resume.md...');
-                const response = await fetch('resume.md');
-                
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                
-                console.log('Response received, reading text...');
-                const markdown = await response.text();
-                console.log('Markdown content loaded:', markdown.substring(0, 100) + '...');
-                
-                if (!window.md) {
-                    throw new Error('casual-markdown library not loaded!');
-                }
-                
-                console.log('Converting markdown to HTML...');
-                const html = md.html(markdown);
-                console.log('HTML generated, updating content...');
-                
-                content.innerHTML = html;
-                console.log('Content updated successfully');
-            } catch (error) {
-                console.error('Error loading markdown:', error);
-                content.innerHTML = `
-                    <div style="color: red; padding: 20px;">
-                        <h2>Error Loading Content</h2>
-                        <p>There was an error loading the content. Please check the console for details.</p>
-                        <p>Error details: ${error.message}</p>
-                    </div>
-                `;
-            }
-        }
-
-        // Load content when page loads
-        window.addEventListener('load', loadMarkdown);
+        fetch('content.md')
+            .then(response => response.text())
+            .then(text => {
+                document.getElementById('content').innerHTML = marked.parse(text);
+            })
+            .catch(() => {
+                document.getElementById('content').innerHTML = '<p>Could not load content.</p>';
+            });
     </script>
 </body>
 </html>
