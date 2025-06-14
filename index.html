@@ -36,14 +36,40 @@
     <script>
         // Function to load and render markdown content
         async function loadMarkdown() {
+            console.log('Starting to load markdown...');
+            const content = document.getElementById('content');
+            
             try {
+                console.log('Fetching resume.md...');
                 const response = await fetch('resume.md');
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                console.log('Response received, reading text...');
                 const markdown = await response.text();
-                const content = document.getElementById('content');
-                content.innerHTML = md.html(markdown);
+                console.log('Markdown content loaded:', markdown.substring(0, 100) + '...');
+                
+                if (!window.md) {
+                    throw new Error('casual-markdown library not loaded!');
+                }
+                
+                console.log('Converting markdown to HTML...');
+                const html = md.html(markdown);
+                console.log('HTML generated, updating content...');
+                
+                content.innerHTML = html;
+                console.log('Content updated successfully');
             } catch (error) {
                 console.error('Error loading markdown:', error);
-                document.getElementById('content').innerHTML = 'Error loading content. Please try again later.';
+                content.innerHTML = `
+                    <div style="color: red; padding: 20px;">
+                        <h2>Error Loading Content</h2>
+                        <p>There was an error loading the content. Please check the console for details.</p>
+                        <p>Error details: ${error.message}</p>
+                    </div>
+                `;
             }
         }
 
