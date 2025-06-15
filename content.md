@@ -39,7 +39,8 @@ Successfully built and maintained a dual-boot Hackintosh system for development 
 
 ## Education
 
-[Your education details here]
+Graduate of Pennridge High School
+Currently Enrolled at Vassar College
 
 ## Contact
 
