@@ -1,8 +1,10 @@
 project:
   type: website
+  output-dir: .
 
 website:
   title: "Patrick Mill"
+  search: false
   navbar:
     background: dark
     left:
