@@ -1,12 +1,6 @@
-# About Me
-
-Hi, I'm Patrick. I'm passionate about technology, computer hardware and software. I enjoy building and experimenting with various tech projects, from creating Android applications to setting up self-hosted servers and exploring the world of Hackintosh systems.
-
-My journey in technology spans multiple areas including mobile app development, system administration, and hardware troubleshooting. I believe in learning through hands-on experience and sharing knowledge with the community.
-
-When I'm not working on tech projects, you'll find me playing baseball, which has been a lifelong passion of mine. I appreciate the strategic thinking and teamwork that both technology and sports require.
-
-
+---
+title: "About Me"
+---
 
 ## Projects
 
@@ -24,7 +18,7 @@ While my work on the project is complete for the class, I have ideas for porting
 
 [Source code for QuickNotes can be found here.](https://github.com/patricksmill/QuickNotes)
 
-*Skills learned/practiced:*
+**Skills learned/practiced:**
 
 * Android app development using Java
 * UI/UX design principles for mobile applications
@@ -33,8 +27,6 @@ While my work on the project is complete for the class, I have ideas for porting
 * Debugging and testing mobile applications
 * Tag-based organization and filtering systems
 * Various IDEs (Intellij, VS Code, Android Studio)
-
-### Miscellaneous
 
 #### AMDRyzenTosh
 
@@ -46,7 +38,7 @@ After a few hours of tinkering around in this new (to me) MacOS world, one quest
 
 [My EFI can be found here.](https://github.com/patricksmill/AMDRyzentoshEFI)
 
-*Skills learned/practiced:*
+**Skills learned/practiced:**
 
 * EFI bootloader configuration and troubleshooting
 * Understanding of OpenCore and Hackintosh architecture
@@ -66,7 +58,7 @@ The server runs on CasaOS on top of Ubuntu Server, and utilizes several Docker c
 * I ripped our old DVDs using MakeMKV and organized them using Radarr for movies and Sonarr for TV Shows
 * Plex Media Server streams these backups to devices on the network, serving as a Self-hosted Netflix
 
-*Skills learned/practiced:*
+**Skills learned/practiced:**
 
 * Linux server administration (Ubuntu Server)
 * Docker
@@ -82,5 +74,3 @@ The server runs on CasaOS on top of Ubuntu Server, and utilizes several Docker c
 
 * Graduate of Pennridge High School
 * Currently Enrolled at Vassar College '27
-
-

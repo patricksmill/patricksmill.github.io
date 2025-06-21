@@ -1,0 +1,30 @@
+project:
+  type: website
+
+website:
+  title: "Patrick Mill"
+  navbar:
+    background: dark
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+    right:
+      - icon: github
+        href: https://github.com/patricksmill
+        aria-label: GitHub
+      - icon: linkedin
+        href: https://linkedin.com/in/patrick-mill
+        aria-label: LinkedIn
+      - icon: envelope
+        href: mailto:patricksmill@outlook.com
+        aria-label: Email
+
+format:
+  html:
+    theme: solar
+    css: styles.css
+    toc: true
+
+
+
