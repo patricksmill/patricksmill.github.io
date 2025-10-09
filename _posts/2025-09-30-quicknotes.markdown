@@ -11,12 +11,17 @@ While my work on the project is complete for the class, I have ideas for porting
 
 [Source code for QuickNotes can be found here.](https://github.com/patricksmill/QuickNotes)
 
+### Screenshots
+
+![Screenshot 1](/assets/images/1.png){: style="max-width: 30%; height: auto; margin: 0 8px 16px 0;" }
+![Screenshot 2](/assets/images/2.png){: style="max-width: 30%; height: auto; margin: 0 8px 16px 0;" }
+
 **Skills learned/practiced:**
 
 * Android app development using Java
 * UI/UX design principles for mobile applications
 * Version control with Git (terminal and IDE integration)
-* Software design patterns and project structure (MVC)
+* Software design patterns and project structure (MVC, MVVM)
 * Debugging and testing mobile applications
 * Tag-based organization and filtering systems
 * Various IDEs (Intellij, VS Code, Android Studio)
