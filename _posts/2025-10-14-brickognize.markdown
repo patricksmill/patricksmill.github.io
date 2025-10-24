@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Brickognize and Sorting LEGO"
+title:  "Brickognize: Sorting LEGO the Hard Way"
 date:   2025-10-14 13:12:19 -0400
 categories: software
 ---

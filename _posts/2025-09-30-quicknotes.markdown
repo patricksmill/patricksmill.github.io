@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "QuickNotes"
+title:  "QuickNotes: My AI Personal Note-Taking Application"
 date:   2025-09-30 12:29:19 -0400
 categories: software
 ---

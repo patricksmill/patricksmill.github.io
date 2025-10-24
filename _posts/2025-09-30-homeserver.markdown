@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Home Server"
+title:  "My Home Server: A Dive into Docker"
 date:   2025-09-30 12:35:19 -0400
 categories: software
 ---
