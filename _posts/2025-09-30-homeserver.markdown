@@ -7,11 +7,18 @@ categories: software
 
 I built my first computer during the pandemic in 2020. Since then, I have gradually been upgrading it one part at a time until, like the ship of Theseus, it is comprised of new replacement parts. This left me with an entire PC's worth of old parts. My summer project since coming home from school has been building a Family home server that serves as a media device.
 
-The server runs on CasaOS on top of Ubuntu Server, and utilizes several Docker containers:
+The server runs on Ubuntu Server, and utilizes several Docker containers:
 
 * For family photos, I use Immich, a self-hosted Google Photos alternative.
-* I ripped our old DVDs using MakeMKV and organized them using Radarr for movies and Sonarr for TV Shows
-* Plex Media Server streams these backups to devices on the network, serving as a Self-hosted Netflix
+* My (Dad's) music collection is stored on the server, and I use Navidrome to access them from other devices.
+* Romm acts as a personal retro video game library. I can download my game backups to any device.
+* Portainer is used to manage and update the Docker stacks.
+
+![Homepage]({{ "/assets/images/homeserver/homepage.png" | relative_url }})
+
+This is my [Homepage](https://gethomepage.dev/) setup. I have it as the default page on all of my devices.
+{: .caption .caption-center }
+
 
 **Skills learned/practiced:**
 

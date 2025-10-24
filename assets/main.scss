@@ -6,4 +6,10 @@
 .float-right { float: right; margin: 0 0 1rem 1rem; }
 img { max-width: 100%; height: auto; }
 
-
+.caption { 
+    display: block;
+    font-size: $small-font-size;
+    color: $grey-color;
+    margin-top: 0.25rem;
+  }
+  .caption-center { text-align: center; }
