@@ -2,7 +2,7 @@
 layout: post
 title:  "My Home Server: A Dive into Docker"
 date:   2025-09-30 12:35:19 -0400
-categories: software
+categories: systems
 ---
 
 I built my first computer during the pandemic in 2020. Since then, I have gradually been upgrading it one part at a time until, like the ship of Theseus, it is comprised of new replacement parts. This left me with an entire PC's worth of old parts. My summer project since coming home from school has been building a Family home server that serves as a media device.

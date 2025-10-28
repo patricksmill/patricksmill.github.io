@@ -2,7 +2,7 @@
 layout: post
 title:  "AMD Ryzentosh: It's the Journey..."
 date:   2025-09-30 12:35:19 -0400
-categories: software
+categories: systems
 ---
 
 In the summer of 2024, I became interested in building my own [Hackintosh](https://en.wikipedia.org/wiki/Hackintosh). I had not used MacOS since 3rd grade at my elementary school, and since then had used primarily Windows with the occasional linux distro attempted every other month. I was so interested that when it was time to upgrade my graphics card, I dropped the NVIDIA 1650 Super for an AMD RX 6600 for better compatibility with macOS, per the [Dortania OpenCore Guide](https://dortania.github.io/OpenCore-Install-Guide/). This guide can be a little overwhelming and is not completely up-to-date, but it is a good starting point for anyone wondering if it is even possible to Hackintosh their system.
