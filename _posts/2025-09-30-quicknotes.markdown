@@ -18,10 +18,10 @@ While my work on the project is complete for the class, I have ideas for porting
 
 **Skills learned/practiced:**
 
-* Android app development using Java
+* Android app development using Java and Kotlin
 * UI/UX design principles for mobile applications
 * Version control with Git (terminal and IDE integration)
-* Software design patterns and project structure (MVC, MVVM)
+* Software design patterns and project structure (MVC)
 * Debugging and testing mobile applications
 * Tag-based organization and filtering systems
 * Various IDEs (Intellij, VS Code, Android Studio)
