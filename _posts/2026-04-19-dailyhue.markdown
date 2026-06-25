@@ -1,0 +1,48 @@
+---
+layout: post
+title:  "The Daily Hue: A Daily Color Puzzle Built on Real Art"
+date:   2026-04-19 20:12:19 -0400
+categories: software
+---
+
+Sometime in mid-February my teammate Cade pitched me an idea for a daily color-matching game built around real artwork. I went over to his dorm after a practice. He asked me, "what do you think about Wordle, but for Art?". After a little more explaining, some logistic disucssions, and a little name brainstorming, I was in. Cade had zero technical know-how on how to build a website (and neither did I to be fair), so we spent the rest of the night getting git and an IDE installed on his laptop to get started right away. Thankfully with the rise of AI, I was able to answer most of Cades questions towards a chatbot, especially for any general questions like "What is github?". The split of work was mostly clear: Cade would handle the look of the site and general gameplay while I would handle all of the backend, and offer some frontend/game advice when I saw fit. I did not participate in any of the social media promotion, which is very much Cade's department.
+
+A month or so later, [The Daily Hue](https://thedailyhue.com) was playable in the browser. It is live now, and this is how we got there.
+
+## What it is
+
+The Daily Hue is a free daily art and color guessing game. Each day highlights a real work, painting, sculpture, ceramics, or another medium; and asks you to match one hidden color pulled from that piece. You adjust hue, saturation, and lightness sliders and get up to five guesses.
+
+When you match the color or run out of guesses, you unlock the source artwork along with a gallery of other works that share that same hue. Every featured piece includes museum or collection attribution. Puzzles draw from public collections like The Met, Art Institute of Chicago, National Gallery of Art, Rijksmuseum, and the Smithsonian, plus artist-submitted work. That art-history layer is what sets it apart from generic color-matching clones: you are not just training your eye, you are being introduced to real pieces you might never have encountered otherwise. That aspect of this game hooked me, going to school on a campus with it's very own art museum, I thought this would be the perfect game to share with others at Vassar. 
+
+### Screenshots
+
+<!-- TODO: add gameplay screenshot -->
+![Matching today's color](/assets/images/dailyhue/gameplay.png){: style="max-width: 45%; height: auto; margin: 0 8px 16px 0;" }
+ 
+<!-- TODO: add gallery/unlock screenshot -->
+![Unlocked artwork gallery](/assets/images/dailyhue/gallery.png){: style="max-width: 45%; height: auto; margin: 0 8px 16px 0;" }
+
+## How we built it
+
+The project started from a Figma template. Cade had the visual direction; I helped him take those static designs and make them interactive—translating layouts into something that felt alive in the browser. On the frontend we used React and Vite for the daily puzzle flow, the HSL sliders, and shareable results.
+
+My main contribution was the backend on Supabase. That meant designing the database schema for daily puzzles and artwork metadata, standing up the API layer for serving puzzle content, and building workflows to curate and schedule what goes live each day. A color game is simple on the surface, but someone has to own the pipeline that keeps new puzzles showing up reliably.
+
+## The hard part: sourcing art
+
+The sliders and scoring logic were straightforward compared to the content problem. A daily color puzzle is only as good as the art behind it, and sourcing that art turned out to be the real engineering challenge.
+
+Every piece needs to come from a legitimate source, carry correct attribution, and work visually as a color puzzle—not every famous painting has a single interesting hue worth guessing. We pull from museum APIs and public collections, which means wrestling with inconsistent metadata, licensing constraints, and the operational overhead of maintaining a calendar of daily puzzles weeks ahead. I structured much of that curation workflow in Supabase so we could track artwork, attribution, and publish dates in one place instead of scattered spreadsheets.
+
+<!-- TODO: add a specific art-sourcing anecdote here -->
+
+Getting attribution right mattered as much as getting the color right. Players should be able to look up where a work lives and who made it. That requirement shaped how we modeled artwork in the database and how we review each puzzle before it ships.
+
+## Live now
+
+[The Daily Hue](https://thedailyhue.com) is live—you can play today's puzzle in any modern browser, no download or sign-up required. Cade has been iterating on the content side with daily write-ups and Learn guides that go deeper on the art behind each puzzle.
+
+For me, the takeaway was shipping a real product with a teammate while juggling school and baseball: Supabase in a production-ish workflow, the gap between a Figma mock and a polished interactive UI, and the reminder that the unglamorous backend work—schemas, APIs, content pipelines—is often what makes a daily game actually sustainable.
+
+Go match today's color at [thedailyhue.com](https://thedailyhue.com).
